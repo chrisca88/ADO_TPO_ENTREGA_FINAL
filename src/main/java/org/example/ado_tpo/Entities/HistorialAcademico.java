@@ -35,14 +35,6 @@ public class HistorialAcademico {
         this.asignaturas = asignaturas;
     }
 
-    public Estado getEstado() {
-        return estado;
-    }
-
-    public void setEstado(Estado estado) {
-        this.estado = estado;
-    }
-
     public Carrera getCarrera() {
         return carrera;
     }

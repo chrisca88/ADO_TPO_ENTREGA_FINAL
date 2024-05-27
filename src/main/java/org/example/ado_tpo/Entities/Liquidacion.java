@@ -6,7 +6,6 @@ import org.example.ado_tpo.Interfaces.Reporte;
 import java.util.List;
 
 public class Liquidacion implements Reporte {
-    private String nombre;
 
     public void generarReporte(String legajo) {
         Docente docente = DocenteController.getInstancia().getDocenteByLegajo(legajo);

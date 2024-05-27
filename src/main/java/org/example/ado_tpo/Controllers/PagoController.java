@@ -31,15 +31,8 @@ public class PagoController {
         metodoDePago.pagarCuota(cuota.getMonto());
     }
 
-    public void pagarCuota(Cuota cuota, MetodoDePago metodoDePago) {
-        registrarPago(cuota, metodoDePago);
-    }
-
     public List<Pago> getPagos() {
         return pagos;
     }
 
-    public void setPagos(List<Pago> pagos) {
-        this.pagos = pagos;
-    }
 }

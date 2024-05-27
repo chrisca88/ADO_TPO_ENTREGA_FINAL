@@ -16,14 +16,6 @@ public class Disponibilidad {
         this.dia = dia;
     }
 
-    public String getDia() {
-        return dia;
-    }
-
-    public void setDia(String dia) {
-        this.dia = dia;
-    }
-
     public Turno getTurno() {
         return turno;
     }

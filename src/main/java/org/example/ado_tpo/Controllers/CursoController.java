@@ -46,25 +46,6 @@ public class CursoController {
         return null;
     }
 
-    public List<Estudiante> obtenerInscriptosPorCurso() {
-        List<Estudiante> estudiantesInscriptos = new ArrayList<>();
-        for (Curso curso : cursos) {
-            estudiantesInscriptos.addAll(curso.getEstudiantesInscriptos());
-        }
-        return estudiantesInscriptos;
-    }
-
-    public boolean validarInscripcionEstudianteACurso(int numeroCurso) {
-        Curso curso = obtenerCurso(numeroCurso);
-        if (curso != null) {
-            return   curso.getCupos() >= 1;
-        }
-        return false;
-    }
-
-    public void agregarCurso(Curso curso) {
-        cursos.add(curso);
-    }
 
     // Método recursivo para verificar si todas las correlativas anteriores están finalizadas
     private boolean correlativasFinalizadas(Materia materia, List<Asignatura> asignaturas) {
@@ -159,8 +140,5 @@ public class CursoController {
         return cursos;
     }
 
-    public void setCursos(List<Curso> cursos) {
-        this.cursos = cursos;
-    }
 }
 

@@ -19,15 +19,8 @@ public class Pago {
         return cuota;
     }
 
-    public void setCuota(Cuota cuota) {
-        this.cuota = cuota;
-    }
-
     public MetodoDePago getMetodoDePago() {
         return metodoDePago;
     }
 
-    public void setMetodoDePago(MetodoDePago metodoDePago) {
-        this.metodoDePago = metodoDePago;
-    }
 }

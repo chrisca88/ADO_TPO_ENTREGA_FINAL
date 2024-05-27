@@ -7,7 +7,6 @@ import org.example.ado_tpo.Entities.*;
 import org.example.ado_tpo.Interfaces.Reporte;
 import org.springframework.stereotype.Controller;
 
-import javax.print.Doc;
 
 @Controller
 public class DocenteController {
@@ -49,13 +48,5 @@ public class DocenteController {
         Reporte liquidacion = new Liquidacion();
         docente.generarReporte(legajo,liquidacion);
 
-    }
-
-    public List<Docente> getDocentes() {
-        return docentes;
-    }
-
-    public void setDocentes(List<Docente> docentes) {
-        this.docentes = docentes;
     }
 }

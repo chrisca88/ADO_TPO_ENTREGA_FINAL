@@ -21,11 +21,7 @@ public class Materia {
         this.correlativasPosteriores = new ArrayList<>();
         this.cursos = new ArrayList<>();
     }
-
-    public List<Curso> obtenerCursos() {
-        return cursos;
-    }
-
+    // Getters y setters
     public int getCargaHoraria() {
         return cargaHoraria;
     }
@@ -38,50 +34,12 @@ public class Materia {
         return nombre;
     }
 
-    public void agregarCurso(Curso curso) {
-        cursos.add(curso);
-    }
-
     public List<Materia> getCorrelativasAnteriores() {
         return correlativasAnteriores;
     }
 
-    public List<Materia> getCorrelativasPosteriores() {
-        return correlativasPosteriores;
-    }
-
-    // Getters y setters
-
     public String getCodigo() {
         return codigo;
-    }
-
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setCargaHoraria(int cargaHoraria) {
-        this.cargaHoraria = cargaHoraria;
-    }
-
-    public void setCorrelativasPosteriores(List<Materia> correlativasPosteriores) {
-        this.correlativasPosteriores = correlativasPosteriores;
-    }
-
-    public void setCorrelativasAnteriores(List<Materia> materia) {
-        this.correlativasAnteriores = materia;
-    }
-
-    public void setCosto(float costo) {
-        this.costo = costo;
-    }
-
-    public void setCursos(List<Curso> cursos) {
-        this.cursos = cursos;
     }
 
     public void agregarCorrelativaAnterior(Materia materia) {

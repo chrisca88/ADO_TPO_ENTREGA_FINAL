@@ -31,32 +31,12 @@ public class Docente {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public String getApellido() {
         return apellido;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public String getDni() {
-        return dni;
-    }
-
-    public void setDni(String dni) {
-        this.dni = dni;
-    }
-
     public String getLegajo() {
         return legajo;
-    }
-
-    public void setLegajo(String legajo) {
-        this.legajo = legajo;
     }
 
     public List<Curso> getCursosAsignados() {
@@ -78,8 +58,5 @@ public class Docente {
 
     public void generarReporte(String legajo,Reporte reporte ){
         reporte.generarReporte(legajo);
-    }
-    public void agregarCurso(int numeroCurso){
-
     }
 }

@@ -28,59 +28,10 @@ public class EstudianteController {
         return estudiante;
     }
 
-    public boolean validarCorrelativas(String legajo) {
-        for (Estudiante estudiante : estudiantes) {
-            if (estudiante.getLegajo().equals(legajo)) {
-                return estudiante.getMateriasAprobadas().containsAll(
-                        estudiante.getCarrera().getMaterias().stream()
-                                .filter(materia -> materia.getCorrelativasAnteriores().isEmpty())
-                                .toList()
-                );
-            }
-        }
-        return false;
-    }
-
-    public boolean validarCargaHoraria(String legajo) {
-        for (Estudiante estudiante : estudiantes) {
-            if (estudiante.getLegajo().equals(legajo)) {
-                return estudiante.verCargaHoraria() <= estudiante.getCarrera().getCargaHorariaMaxima();
-            }
-        }
-        return false;
-    }
-
-    public List<Curso> buscarPorTurno(String turno) {
-        List<Curso> cursosEncontrados = new ArrayList<>();
-        for (Estudiante estudiante : estudiantes) {
-            for (Materia materia : estudiante.getCarrera().getMaterias()) {
-                cursosEncontrados.addAll(materia.obtenerCursos().stream()
-                        .filter(curso -> curso.getHorario().equals(turno))
-                        .toList());
-            }
-        }
-        return cursosEncontrados;
-    }
-
-    public List<Curso> buscarPorCodigoMateria(String codigoMateria) {
-        List<Curso> cursosEncontrados = new ArrayList<>();
-        for (Estudiante estudiante : estudiantes) {
-            for (Materia materia : estudiante.getCarrera().getMaterias()) {
-                if (materia.getCodigo().equals(codigoMateria)) {
-                    cursosEncontrados.addAll(materia.obtenerCursos());
-                }
-            }
-        }
-        return cursosEncontrados;
-    }
 
     // Getters y setters para la lista de estudiantes
     public List<Estudiante> getEstudiantes() {
         return estudiantes;
-    }
-
-    public void setEstudiantes(List<Estudiante> estudiantes) {
-        this.estudiantes = estudiantes;
     }
 
     public Estudiante getEstudianteByLegajo(String legajo){

@@ -2,7 +2,6 @@ package org.example.ado_tpo.Entities;
 
 import org.example.ado_tpo.Enums.Estado;
 
-import java.util.List;
 
 public class Asignatura {
     private Curso curso;
@@ -42,10 +41,6 @@ public class Asignatura {
 
     public void setEstado(Estado estado) {
         this.estado = estado;
-    }
-
-    public Cuota getCuota() {
-        return cuota;
     }
 
     public void setCuota(Cuota cuota) {

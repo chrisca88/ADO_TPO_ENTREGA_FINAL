@@ -1,8 +1,6 @@
 package org.example.ado_tpo.Controllers;
 
 import org.example.ado_tpo.Entities.Aula;
-import org.example.ado_tpo.Entities.Docente;
-import org.example.ado_tpo.Enums.Turno;
 import org.springframework.stereotype.Controller;
 
 import java.util.ArrayList;
@@ -28,20 +26,6 @@ public class AulaController {
     public void nuevaAula(int capacidadMaxima, int numero) {
         Aula aula = new Aula(capacidadMaxima, numero);
         aulas.add(aula);
-    }
-
-
-    public int capacidadMaxima(int numero) {
-        Aula aula = getAulaByNumero(numero);
-        return aula.getCapacidadMaxima();
-    }
-
-    public List<Aula> getAulas() {
-        return aulas;
-    }
-
-    public void setAulas(List<Aula> aulas) {
-        this.aulas = aulas;
     }
 
     public Aula getAulaByNumero(int numero){

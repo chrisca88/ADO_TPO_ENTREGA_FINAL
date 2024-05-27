@@ -23,10 +23,6 @@ public class Curso {
     private Turno horario;
 
 
-    public int calcularCapacidad() {
-        return  cupos - estudiantesInscriptos.size();
-    }
-
     public Curso(){
         estudiantesInscriptos = new ArrayList<>();
         docentesAsignados = new ArrayList<>();
@@ -44,10 +40,6 @@ public class Curso {
 
     public void agregarDocente(Docente docente) {
         this.docentesAsignados.add(docente);
-    }
-
-    public LocalDate getFecha() {
-        return fecha;
     }
 
     // Getters y setters
@@ -78,13 +70,6 @@ public class Curso {
         return docentesAsignados;
     }
 
-    public void setDocentesAsignados(List<Docente> docentesAsignados) {
-        this.docentesAsignados = docentesAsignados;
-    }
-
-    public String getCodigoMateria() {
-        return codigoMateria;
-    }
 
     public void setCodigoMateria(String codigoMateria) {
         this.codigoMateria = codigoMateria;
@@ -94,22 +79,8 @@ public class Curso {
         return estudiantesInscriptos;
     }
 
-    public void setEstudiantesInscriptos(List<Estudiante> estudiantesInscriptos) {
-        this.estudiantesInscriptos = estudiantesInscriptos;
-    }
     public void inscribirEstudiante(Estudiante e){
-
-
-
         this.estudiantesInscriptos.add(e);
-    }
-
-    public void setFecha(LocalDate fecha) {
-        this.fecha = fecha;
-    }
-
-    public int getCupos() {
-        return cupos;
     }
 
     public void setCupos() {
