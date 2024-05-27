@@ -338,4 +338,4 @@ class AdoTpoApplicationTests {
         System.out.println("Cuota "+numeroCuota+" registrada y abonada correctamente. "+monto+"$.");
     }
 
-}
+}//TEST
